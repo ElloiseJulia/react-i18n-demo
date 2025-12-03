@@ -17,7 +17,7 @@ export function Home() {
   );
 }
 
-const styles = {
+const styles: Record<string, React.CSSProperties> = {
   container: {
     maxWidth: "600px",
     margin: "0 auto",
@@ -65,3 +65,4 @@ const styles = {
     cursor: "pointer",
   },
 };
+

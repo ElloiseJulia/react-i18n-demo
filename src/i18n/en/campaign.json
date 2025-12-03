@@ -1,0 +1,18 @@
+{
+  "title": "Campaign",
+  "search": "Search campaigns...",
+  "create": "Create Campaign",
+  "card1": {
+    "title": "Campaign 1",
+    "content": "This is a sample campaign card showing campaign information."
+  },
+  "card2": {
+    "title": "Campaign 2",
+    "content": "Another campaign card with different content and details."
+  },
+  "card3": {
+    "title": "Campaign 3",
+    "content": "Third campaign card demonstrating the translation system."
+  }
+}
+
