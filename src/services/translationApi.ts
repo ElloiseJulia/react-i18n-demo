@@ -1,7 +1,3 @@
-// ============================================
-// .NET BACKEND API SERVICE FOR TRANSLATIONS
-// ============================================
-
 import type { Translations, LanguageCode } from "../i18n/types";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://api.yourdomain.com";
@@ -16,11 +12,6 @@ export interface ApiError {
   status: number;
 }
 
-/**
- * Fetch translations from .NET backend API
- * @param language - Language code (e.g., "en", "zh")
- * @returns Promise with translations data
- */
 export async function fetchTranslationsFromApi(
   language: LanguageCode
 ): Promise<TranslationApiResponse> {
@@ -29,8 +20,6 @@ export async function fetchTranslationsFromApi(
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        // Add authentication token if needed
-        // "Authorization": `Bearer ${token}`
       },
     });
 
@@ -46,10 +35,6 @@ export async function fetchTranslationsFromApi(
   }
 }
 
-/**
- * Fetch all available languages from .NET backend
- * @returns Promise with array of language codes
- */
 export async function fetchAvailableLanguages(): Promise<LanguageCode[]> {
   try {
     const response = await fetch(`${API_BASE_URL}/api/translations/languages`, {
@@ -71,12 +56,6 @@ export async function fetchAvailableLanguages(): Promise<LanguageCode[]> {
   }
 }
 
-/**
- * Update user's language preference on .NET backend
- * @param language - Language code to set
- * @param userId - Optional user ID for authenticated users
- * @returns Promise indicating success
- */
 export async function updateUserLanguagePreference(
   language: LanguageCode,
   userId?: string
@@ -86,8 +65,6 @@ export async function updateUserLanguagePreference(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Add authentication token if needed
-        // "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify({
         language,
@@ -103,4 +80,5 @@ export async function updateUserLanguagePreference(
     throw error;
   }
 }
+
 

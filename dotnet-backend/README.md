@@ -2,12 +2,12 @@
 
 This is a .NET 8.0 Web API backend that provides translation data for the React frontend.
 
-## 📋 Prerequisites
+## Prerequisites
 
 - .NET 8.0 SDK or later
 - Visual Studio 2022, VS Code, or Rider
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Navigate to the backend directory
 
@@ -32,7 +32,7 @@ The API will be available at:
 - HTTPS: `https://localhost:5001`
 - Swagger UI: `https://localhost:5001/swagger`
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Get Translations for a Language
 ```
@@ -84,7 +84,7 @@ Content-Type: application/json
 }
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### CORS Configuration
 
@@ -110,7 +110,7 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 2. Create a `Translation` model and DbContext
 3. Update `TranslationController` to use the database
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 dotnet-backend/
@@ -121,7 +121,7 @@ dotnet-backend/
 └── README.md                   # This file
 ```
 
-## 🔐 Authentication (Optional)
+## Authentication (Optional)
 
 To add authentication:
 
@@ -133,7 +133,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 2. Configure JWT in `Program.cs`
 3. Add `[Authorize]` attributes to controllers
 
-## 📝 Notes
+## Notes
 
 - This is a minimal implementation for demonstration
 - In production, consider:
@@ -142,4 +142,5 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
   - Adding authentication/authorization
   - Error handling and logging
   - Rate limiting
+
 

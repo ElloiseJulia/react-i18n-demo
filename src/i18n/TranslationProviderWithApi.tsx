@@ -3,33 +3,27 @@ import type { LanguageCode, Translations } from "./types";
 import { TranslationContext } from "./TranslationContext";
 import { fetchTranslationsFromApi } from "../services/translationApi";
 
-// ============================================
-// PROVIDER COMPONENT WITH .NET API INTEGRATION
-// ============================================
-
 interface TranslationProviderWithApiProps {
   children: ReactNode;
   defaultLanguage?: LanguageCode;
-  useApi?: boolean; // Toggle between local JSON files and API
-  apiBaseUrl?: string; // Optional: override default API base URL
+  useApi?: boolean;
+  apiBaseUrl?: string;
 }
 
 export function TranslationProviderWithApi({ 
   children, 
   defaultLanguage = "en",
   useApi = false,
-  apiBaseUrl: _apiBaseUrl // Reserved for future use
+  apiBaseUrl: _apiBaseUrl
 }: TranslationProviderWithApiProps) {
   const [language, setLanguage] = useState<LanguageCode>(defaultLanguage);
   const [translations, setTranslations] = useState<Translations>({});
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Load translations from API or local files
   useEffect(() => {
     if (useApi) {
       loadTranslationsFromApi(language);
     } else {
-      // Fallback to local JSON files
       loadLocalTranslations(language);
     }
   }, [language, useApi]);
@@ -41,7 +35,6 @@ export function TranslationProviderWithApi({
       setTranslations(data.translations);
     } catch (error) {
       console.error("Failed to load translations from API, falling back to local:", error);
-      // Fallback to local translations on API error
       loadLocalTranslations(lang);
     } finally {
       setIsLoading(false);
@@ -49,7 +42,6 @@ export function TranslationProviderWithApi({
   };
 
   const loadLocalTranslations = async (lang: LanguageCode) => {
-    // Dynamic import for local JSON files
     try {
       if (lang === "en") {
         const [home, common] = await Promise.all([

@@ -1,7 +1,3 @@
-// ============================================
-// TYPE DEFINITIONS FOR I18N
-// ============================================
-
 export type LanguageCode = "en" | "zh" | string;
 
 export interface TranslationFile {

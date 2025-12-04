@@ -14,7 +14,7 @@ export function Overview() {
             <Statistic
               title={t("overview.totalCampaigns")}
               value={1128}
-              prefix="📊"
+              prefix=""
             />
           </Card>
         </Col>
@@ -23,7 +23,7 @@ export function Overview() {
             <Statistic
               title={t("overview.activeCampaigns")}
               value={456}
-              prefix="✅"
+              prefix=""
             />
           </Card>
         </Col>
@@ -32,7 +32,7 @@ export function Overview() {
             <Statistic
               title={t("overview.totalImpressions")}
               value={112893}
-              prefix="👁️"
+              prefix=""
             />
           </Card>
         </Col>
@@ -41,7 +41,7 @@ export function Overview() {
             <Statistic
               title={t("overview.totalClicks")}
               value={8934}
-              prefix="🖱️"
+              prefix=""
             />
           </Card>
         </Col>
@@ -53,4 +53,5 @@ export function Overview() {
     </div>
   );
 }
+
 

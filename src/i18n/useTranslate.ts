@@ -2,10 +2,6 @@ import { useContext } from "react";
 import { TranslationContext } from "./TranslationContext";
 import type { UseTranslateReturn } from "./types";
 
-// ============================================
-// HOOK useTranslate
-// ============================================
-
 export function useTranslate(): UseTranslateReturn {
   const context = useContext(TranslationContext);
 
@@ -15,7 +11,6 @@ export function useTranslate(): UseTranslateReturn {
 
   const { language, setLanguage, translations, isLoading } = context;
 
-  // Translation function: t("home.title") or t("campaign.card1.title")
   function t(key: string): string {
     const parts = key.split(".");
     const fileName = parts[0];
@@ -26,7 +21,6 @@ export function useTranslate(): UseTranslateReturn {
       return key;
     }
 
-    // Navigate through nested objects
     let value: any = file;
     for (let i = 1; i < parts.length; i++) {
       value = value[parts[i]];
@@ -36,7 +30,6 @@ export function useTranslate(): UseTranslateReturn {
       }
     }
 
-    // Return string value or key if not a string
     if (typeof value === "string") {
       return value;
     }

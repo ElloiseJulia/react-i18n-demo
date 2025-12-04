@@ -2,10 +2,6 @@ import { useState, ReactNode } from "react";
 import type { LanguageCode, Translations } from "./types";
 import { TranslationContext } from "./TranslationContext";
 
-// ============================================
-// IMPORT ALL TRANSLATIONS DIRECTLY
-// ============================================
-
 import enHome from "./en/home.json";
 import enCommon from "./en/common.json";
 import enOverview from "./en/overview.json";
@@ -19,7 +15,6 @@ import zhReport from "./zh/report.json";
 import zhCampaign from "./zh/campaign.json";
 import zhNav from "./zh/nav.json";
 
-// All translations organized by language
 const ALL_TRANSLATIONS: Record<LanguageCode, Translations> = {
   en: {
     home: enHome,
@@ -39,10 +34,6 @@ const ALL_TRANSLATIONS: Record<LanguageCode, Translations> = {
   },
 };
 
-// ============================================
-// PROVIDER COMPONENT
-// ============================================
-
 interface TranslationProviderProps {
   children: ReactNode;
   defaultLanguage?: LanguageCode;
@@ -52,10 +43,7 @@ export function TranslationProvider({
   children, 
   defaultLanguage = "en" 
 }: TranslationProviderProps) {
-  // Current language (English by default)
   const [language, setLanguage] = useState<LanguageCode>(defaultLanguage);
-
-  // Get translations for current language
   const translations = ALL_TRANSLATIONS[language] || ALL_TRANSLATIONS["en"];
 
   return (

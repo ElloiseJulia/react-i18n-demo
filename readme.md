@@ -1,4 +1,4 @@
-# 🌍 网页语种切换技术方案 Demo
+# 网页语种切换技术方案 Demo
 
 基于 React + TypeScript + Ant Design 的语种切换系统演示项目。
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 📦 快速开始
+## 快速开始
 
 ```bash
 # 1. 安装依赖
@@ -21,7 +21,7 @@ npm run dev
 
 ---
 
-## 🛠️ 技术栈
+## 技术栈
 
 - **React 18** + **TypeScript** - 前端框架
 - **React Router** - 多页面路由
@@ -31,7 +31,7 @@ npm run dev
 
 ---
 
-## 📁 项目结构
+## 项目结构
 
 ```
 translation-react/
@@ -88,7 +88,7 @@ translation-react/
 
 ---
 
-## 🧠 核心实现原理
+## 核心实现原理
 
 ### 1. Context Provider（TranslationProvider.tsx）
 
@@ -135,7 +135,7 @@ const { t, language, setLanguage } = useTranslate();
 
 ---
 
-## 🎯 在组件中使用
+## 在组件中使用
 
 ### 基本用法
 
@@ -165,7 +165,7 @@ function MyComponent() {
 
 ---
 
-## 🚀 功能演示
+## 功能演示
 
 ### 多页面路由
 
@@ -189,7 +189,7 @@ function MyComponent() {
 
 ---
 
-## ➕ 添加新翻译
+## 添加新翻译
 
 ### 在现有文件中添加新键
 
@@ -263,7 +263,7 @@ const ALL_TRANSLATIONS = {
 
 ---
 
-## 🌐 添加新语言
+## 添加新语言
 
 示例：添加法语
 
@@ -308,7 +308,7 @@ const LANGUAGES = [
 
 ---
 
-## 🔌 .NET 后端集成（可选）
+## .NET 后端集成（可选）
 
 ### 使用 API 模式
 
@@ -351,7 +351,7 @@ VITE_USE_API=true
 
 ---
 
-## 📊 数据流
+## 数据流
 
 ```
 用户点击语言选择器
@@ -367,7 +367,7 @@ t("overview.title") 返回中文翻译
 
 ---
 
-## 🔑 核心技术
+## 核心技术
 
 | 技术 | 用途 |
 |------|------|
@@ -380,7 +380,7 @@ t("overview.title") 返回中文翻译
 
 ---
 
-## ❓ 常见问题
+## 常见问题
 
 ### "useTranslate must be used inside a TranslationProvider"
 
@@ -406,7 +406,7 @@ t("overview.title") 返回中文翻译
 
 ---
 
-## 📦 构建部署
+## 构建部署
 
 ### 构建生产版本
 
@@ -424,7 +424,7 @@ npm run build
 
 ---
 
-## 📚 相关文档
+## 相关文档
 
 - [语言切换技术方案报告.md](./语言切换技术方案报告.md) - 详细的技术方案说明
 - [React Context 文档](https://react.dev/learn/passing-data-deeply-with-context)
@@ -433,14 +433,10 @@ npm run build
 
 ---
 
-## 🎯 项目特点
+## 项目特点
 
-- ✅ **轻量级**：使用 React 原生功能，无需第三方 i18n 库
-- ✅ **类型安全**：完整的 TypeScript 类型定义
-- ✅ **易于集成**：代码结构清晰，可直接集成到现有项目
-- ✅ **灵活的数据源**：支持本地 JSON 文件和 API 两种模式
-- ✅ **技术栈匹配**：完全匹配 React + React Router + Ant Design + .NET 技术栈
-
----
-
-Happy coding! 🚀
+- 轻量级：使用 React 原生功能，无需第三方 i18n 库
+- 类型安全：完整的 TypeScript 类型定义
+- 易于集成：代码结构清晰，可直接集成到现有项目
+- 灵活的数据源：支持本地 JSON 文件和 API 两种模式
+- 技术栈匹配：完全匹配 React + React Router + Ant Design + .NET 技术栈

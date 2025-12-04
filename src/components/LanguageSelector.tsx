@@ -2,7 +2,6 @@ import { Select } from "antd";
 import { useTranslate } from "../i18n";
 import type { LanguageOption } from "../i18n/types";
 
-// Available languages
 const LANGUAGES: LanguageOption[] = [
   { code: "en", label: "🇬🇧 English" },
   { code: "zh", label: "🇨🇳 中文" },
